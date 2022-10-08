@@ -6,9 +6,9 @@ import static racingcar.MoveType.STOP;
 public class MoveNumber {
 
     private static final int GO_LIMIT = 4;
-    public static final int MIN = 1;
-    public static final int MAX = 9;
-    public static final String INVALID_MESSAGE = "숫자는 1에서 9까지만 입력 가능합니다.";
+    private static final int MIN = 1;
+    private static final int MAX = 9;
+    private static final String INVALID_MESSAGE = "숫자는 1에서 9까지만 입력 가능합니다.";
 
     private final int number;
 
