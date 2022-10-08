@@ -1,0 +1,44 @@
+package racingcar;
+
+import java.util.Objects;
+
+public class Position implements Comparable<Position> {
+
+    private int point;
+
+    public Position(int point) {
+        this.point = point;
+    }
+
+    public void go() {
+        this.point += 1;
+    }
+
+    public int get() {
+        return this.point;
+    }
+
+    @Override
+    public int compareTo(Position other) {
+        if (this.get() > other.get()) {
+            return -1;
+        }
+        else if (this.get() < other.get()) {
+            return 1;
+        }
+        return 0;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Position position = (Position) o;
+        return point == position.point;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(point);
+    }
+}
