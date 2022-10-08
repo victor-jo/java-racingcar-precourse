@@ -14,17 +14,17 @@ public class Cars {
     }
 
     public String getNames() {
-        StringBuilder sb = new StringBuilder();
+        StringCommaAppender appender = new StringCommaAppender("");
         for (Car car : this.cars) {
-            sb.append(car.getName())
-                .append(",");
+            appender.append(car.getName());
         }
-        sb.setLength(sb.length() - 1);
-        return sb.toString();
+        return appender.get();
     }
 
     public void move(List<MoveType> moveTypes) {
-        for (int i=0, j=0; i < cars.size() && j < moveTypes.size(); ++i, ++j) {
+        for (int i=0, j=0;
+             i < cars.size() && j < moveTypes.size();
+             ++i, ++j) {
             Car car = cars.get(i);
             MoveType moveType = moveTypes.get(j);
             car.move(moveType);
