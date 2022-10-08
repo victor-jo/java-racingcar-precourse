@@ -1,7 +1,7 @@
-package racingcar;
+package racingcar.move;
 
-import static racingcar.MoveType.GO;
-import static racingcar.MoveType.STOP;
+import static racingcar.move.MoveType.GO;
+import static racingcar.move.MoveType.STOP;
 
 public class MoveNumber {
 

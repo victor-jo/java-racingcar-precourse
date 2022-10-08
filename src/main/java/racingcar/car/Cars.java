@@ -1,4 +1,7 @@
-package racingcar;
+package racingcar.car;
+
+import racingcar.move.MoveType;
+import racingcar.util.StringCommaAppender;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,7 @@
-package racingcar;
+package racingcar.car;
 
 import org.junit.jupiter.api.Test;
+import racingcar.car.CarName;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;

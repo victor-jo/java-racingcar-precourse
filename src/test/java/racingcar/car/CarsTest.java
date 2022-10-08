@@ -1,6 +1,8 @@
-package racingcar;
+package racingcar.car;
 
 import org.junit.jupiter.api.Test;
+import racingcar.car.Cars;
+import racingcar.move.MoveType;
 
 import java.util.Arrays;
 import java.util.List;

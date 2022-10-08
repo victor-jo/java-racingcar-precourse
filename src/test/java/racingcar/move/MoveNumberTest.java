@@ -1,6 +1,8 @@
-package racingcar;
+package racingcar.move;
 
 import org.junit.jupiter.api.Test;
+import racingcar.move.MoveNumber;
+import racingcar.move.MoveType;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;

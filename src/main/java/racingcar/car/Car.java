@@ -1,4 +1,7 @@
-package racingcar;
+package racingcar.car;
+
+import racingcar.move.MoveType;
+import racingcar.move.Position;
 
 public class Car {
 
