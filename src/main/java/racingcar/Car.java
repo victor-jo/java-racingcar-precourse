@@ -3,7 +3,7 @@ package racingcar;
 public class Car {
 
     private final CarName name;
-    private int position;
+    private final Position position;
 
     public Car(String name) {
         this(name, 0);
@@ -11,7 +11,7 @@ public class Car {
 
     public Car(String name, int position) {
         this.name = new CarName(name);
-        this.position = position;
+        this.position = new Position(position);
     }
 
     public String getName() {
@@ -20,11 +20,11 @@ public class Car {
 
     public void move(MoveType moveType) {
         if (moveType.isGo()) {
-            this.position += 1;
+            this.position.go();
         }
     }
 
     public int getPosition() {
-        return this.position;
+        return this.position.get();
     }
 }
