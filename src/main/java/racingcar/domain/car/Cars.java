@@ -1,6 +1,6 @@
 package racingcar.domain.car;
 
-import racingcar.domain.move.MoveType;
+import racingcar.domain.move.Move;
 import racingcar.util.StringCommaAppender;
 
 import java.util.ArrayList;
@@ -27,13 +27,9 @@ public class Cars implements Iterable<Car> {
         return appender.get();
     }
 
-    public void move(List<MoveType> moveTypes) {
-        for (int i=0, j=0;
-             i < cars.size() && j < moveTypes.size();
-             ++i, ++j) {
-            Car car = cars.get(i);
-            MoveType moveType = moveTypes.get(j);
-            car.move(moveType);
+    public void move(Move move) {
+        for (Car car : cars) {
+            car.move(move.goOrStop());
         }
     }
 
@@ -43,10 +39,6 @@ public class Cars implements Iterable<Car> {
             positions.add(car.getPosition());
         }
         return positions;
-    }
-
-    public int getCount() {
-        return this.cars.size();
     }
 
     @Override

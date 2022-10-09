@@ -2,6 +2,7 @@ package racingcar.domain.car;
 
 import org.junit.jupiter.api.Test;
 import racingcar.domain.car.Cars;
+import racingcar.domain.move.Move;
 import racingcar.domain.move.MoveType;
 
 import java.util.Arrays;
@@ -38,7 +39,7 @@ public class CarsTest {
     void 전체_자동차가_이동한다() {
         Cars cars = new Cars(Arrays.asList("우쾅쾅두둘", "나의행복", "나의사랑"));
 
-        cars.move(Arrays.asList(MoveType.GO, MoveType.GO, MoveType.GO));
+        cars.move(new Move(() -> 4));
         List<Integer> position = cars.getPositions();
 
         assertThat(position.get(0)).isEqualTo(1);
