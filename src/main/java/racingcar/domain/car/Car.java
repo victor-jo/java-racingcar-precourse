@@ -33,6 +33,10 @@ public class Car implements Comparable<Car> {
         return this.position.get();
     }
 
+    public boolean isWin(int position) {
+        return this.position.get() >= position;
+    }
+
     @Override
     public String toString() {
         return name.get() + " : " + position.toString();

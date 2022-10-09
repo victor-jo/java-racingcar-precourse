@@ -18,8 +18,8 @@ public class CarsTest {
     void 여러_이름들을_준다() {
         Cars cars = new Cars(Arrays.asList("우쾅쾅두둘", "나의행복", "나의사랑"));
         String names = cars.getNames();
-        assertThat(names).isEqualTo("우쾅쾅두둘,나의행복,나의사랑");
-        assertThat(names).isNotEqualTo("우쾅쾅1두둘,나의행복,나의사2랑");
+        assertThat(names).isEqualTo("우쾅쾅두둘, 나의행복, 나의사랑");
+        assertThat(names).isNotEqualTo("우쾅쾅1두둘, 나의행복, 나의사2랑");
     }
 
     @Test
