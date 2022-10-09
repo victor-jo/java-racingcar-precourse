@@ -10,9 +10,9 @@ public class Cars implements Iterable<Car> {
 
     private final List<Car> cars = new ArrayList<>();
 
-    public Cars(List<String> names) {
-        for (String name : names) {
-            this.cars.add(new Car(name));
+    public Cars(CarNames carNames) {
+        for (String carName : carNames) {
+            this.cars.add(new Car(carName));
         }
     }
 

@@ -3,6 +3,7 @@ package racingcar.message;
 import racingcar.context.Printer;
 import racingcar.context.Scanner;
 import racingcar.domain.car.Car;
+import racingcar.domain.car.CarNames;
 import racingcar.domain.car.Cars;
 import racingcar.domain.move.TryCount;
 import racingcar.domain.winner.Winner;
@@ -21,7 +22,8 @@ public class RacingCarMessagePort implements RacingCarMessageAware {
 
     public Cars getCars() {
         printer.println(getMessage().getNames());
-        return new Cars(scanner.getNames());
+        CarNames carNames = new CarNames(scanner.getNames());
+        return new Cars(carNames);
     }
 
     public TryCount getTry() {

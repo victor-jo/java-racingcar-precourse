@@ -1,14 +1,12 @@
 package racingcar.domain.winner;
 
 import racingcar.domain.car.Car;
+import racingcar.domain.car.CarNames;
 import racingcar.domain.car.Cars;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Winner {
 
-    private final List<String> winnerNames = new ArrayList<>();
+    private final CarNames winnerNames = new CarNames();
     private Cars winner;
 
     public Winner(Cars candidates) {

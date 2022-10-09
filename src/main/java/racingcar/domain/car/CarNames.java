@@ -1,13 +1,17 @@
 package racingcar.domain.car;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.function.Consumer;
 
-public class CarNames {
+public class CarNames implements Iterable<String> {
 
     private static final String ERROR_TYPE = "[ERROR] 자동차 이름은 한글이나 영어만 가능합니다.";
     private static final String ERROR_LENGTH = "[ERROR] 자동차 이름은 공백일 수 없습니다.";
     private final List<String> names;
+
+    public CarNames() {
+        this.names = new ArrayList<>();
+    }
 
     public CarNames(String str) {
         this.names = Arrays.asList(str.split(","));
@@ -35,5 +39,24 @@ public class CarNames {
 
     private boolean invalidLength(String name) {
         return name.length() < 1;
+    }
+
+    @Override
+    public Iterator<String> iterator() {
+        return this.names.iterator();
+    }
+
+    @Override
+    public void forEach(Consumer<? super String> action) {
+        this.names.forEach(action);
+    }
+
+    @Override
+    public Spliterator<String> spliterator() {
+        return this.names.spliterator();
+    }
+
+    public void add(String name) {
+        this.names.add(name);
     }
 }
