@@ -4,9 +4,12 @@ import racingcar.move.MoveType;
 import racingcar.util.StringCommaAppender;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Spliterator;
+import java.util.function.Consumer;
 
-public class Cars {
+public class Cars implements Iterable<Car> {
 
     private final List<Car> cars = new ArrayList<>();
 
@@ -40,5 +43,24 @@ public class Cars {
             positions.add(car.getPosition());
         }
         return positions;
+    }
+
+    public int getCount() {
+        return this.cars.size();
+    }
+
+    @Override
+    public Iterator<Car> iterator() {
+        return cars.iterator();
+    }
+
+    @Override
+    public void forEach(Consumer<? super Car> action) {
+        cars.forEach(action);
+    }
+
+    @Override
+    public Spliterator<Car> spliterator() {
+        return cars.spliterator();
     }
 }
