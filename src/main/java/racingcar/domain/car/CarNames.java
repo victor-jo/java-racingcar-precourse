@@ -7,6 +7,7 @@ public class CarNames implements Iterable<String> {
 
     private static final String ERROR_TYPE = "[ERROR] 자동차 이름은 한글이나 영어만 가능합니다.";
     private static final String ERROR_LENGTH = "[ERROR] 자동차 이름은 공백일 수 없습니다.";
+    private static final String ERROR_DUPLICATION = "[ERROR] 자동차 이름은 중복될 수 없습니다.";
     private final List<String> names;
 
     public CarNames() {
@@ -21,6 +22,9 @@ public class CarNames implements Iterable<String> {
     private void invalid() {
         for (String name : names) {
             invalidName(name);
+        }
+        if (invalidDuplication()) {
+            throw new IllegalArgumentException(ERROR_DUPLICATION);
         }
     }
 
@@ -39,6 +43,11 @@ public class CarNames implements Iterable<String> {
 
     private boolean invalidLength(String name) {
         return name.length() < 1;
+    }
+
+    private boolean invalidDuplication() {
+        Set<String> hashSet = new HashSet<>(this.names);
+        return hashSet.size() != this.names.size();
     }
 
     @Override
