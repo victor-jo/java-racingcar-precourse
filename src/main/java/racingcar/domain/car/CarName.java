@@ -11,8 +11,6 @@ public class CarName {
     public CarName(String name) {
         this.name = name;
         if (this.invalidLength()) {
-            ConsolePrinter errPrinter = new ConsolePrinter();
-            errPrinter.println(LENGTH_EXCEPTION_MESSAGE);
             throw new IllegalArgumentException(LENGTH_EXCEPTION_MESSAGE);
         }
     }

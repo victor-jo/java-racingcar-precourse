@@ -28,7 +28,7 @@ public class RacingCarMessagePort implements RacingCarMessagePortAware, RacingCa
     @Override
     public TryCount getTry() {
         printer.println(getMessage().getTry());
-        return new TryCount(scanner.getTry(printer));
+        return new TryCount(scanner.getTry());
     }
 
     @Override
@@ -42,6 +42,11 @@ public class RacingCarMessagePort implements RacingCarMessagePortAware, RacingCa
     @Override
     public void finish(Winner winner) {
         printer.println(getMessage().getWinner() + winner.toString());
+    }
+
+    @Override
+    public void error(String message) {
+        printer.println(message);
     }
 
     @Override

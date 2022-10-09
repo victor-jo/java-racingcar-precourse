@@ -9,4 +9,5 @@ public interface RacingCarMessagePortAware {
     TryCount getTry();
     void play(Cars cars);
     void finish(Winner winner);
+    void error(String message);
 }

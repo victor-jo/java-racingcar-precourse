@@ -16,12 +16,11 @@ public class ConsoleScanner implements Scanner {
     }
 
     @Override
-    public int getTry(Printer errPrinter) {
+    public int getTry() {
         try {
             return Integer.parseInt(Console.readLine());
         }
         catch (Exception e) {
-            errPrinter.println(EXCEPTION_MESSAGE);
             throw new IllegalArgumentException(EXCEPTION_MESSAGE);
         }
     }
