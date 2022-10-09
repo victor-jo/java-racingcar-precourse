@@ -1,22 +1,23 @@
 package racingcar.util;
 
-public class StringCommaAppender {
+public class StringCommaAppender extends StringAppender {
 
     private static final String COMMA = ",";
-    private StringBuilder sb;
 
     public StringCommaAppender(String str) {
-        sb = new StringBuilder(str);
+        super(str);
     }
 
+    @Override
     public void append(String str) {
-        if (!"".equals(sb.toString())) {
-            sb.append(COMMA);
+        if (!"".equals(get())) {
+            super.append(COMMA);
         }
-        sb.append(str);
+        super.append(str);
     }
 
+    @Override
     public String get() {
-        return sb.toString();
+        return super.get();
     }
 }
