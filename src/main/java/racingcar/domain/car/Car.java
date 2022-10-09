@@ -1,5 +1,6 @@
 package racingcar.domain.car;
 
+import racingcar.domain.move.Move;
 import racingcar.domain.move.MoveType;
 import racingcar.domain.move.Position;
 
@@ -21,7 +22,8 @@ public class Car {
         return this.name.get();
     }
 
-    public void move(MoveType moveType) {
+    public void move(Move move) {
+        MoveType moveType = move.goOrStop();
         if (moveType.isGo()) {
             this.position.go();
         }

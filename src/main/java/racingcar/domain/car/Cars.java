@@ -29,7 +29,7 @@ public class Cars implements Iterable<Car> {
 
     public void move(Move move) {
         for (Car car : cars) {
-            car.move(move.goOrStop());
+            car.move(move);
         }
     }
 

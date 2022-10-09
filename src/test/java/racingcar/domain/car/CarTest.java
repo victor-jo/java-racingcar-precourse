@@ -2,15 +2,16 @@ package racingcar.domain.car;
 
 import org.junit.jupiter.api.Test;
 import racingcar.domain.car.Car;
-import racingcar.domain.move.MoveType;
+import racingcar.domain.move.Move;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static racingcar.domain.move.MoveType.GO;
-import static racingcar.domain.move.MoveType.STOP;
 
 public class CarTest {
+
+    private static final Move GO = new Move(() -> 4);
+    private static final Move STOP = new Move(() -> 3);
 
     @Test
     void 자동차에_등록된_이름을_준다() {
@@ -37,7 +38,7 @@ public class CarTest {
     void 자동차가_이동한다() {
         Car car = new Car("우리가바로");
 
-        car.move(MoveType.GO);
+        car.move(GO);
         int position = car.getPosition();
 
         assertThat(position).isEqualTo(1);
