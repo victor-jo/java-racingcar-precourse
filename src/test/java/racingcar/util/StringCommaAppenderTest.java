@@ -16,7 +16,7 @@ public class StringCommaAppenderTest {
         stringCommaAppender.append("호호호");
         stringCommaAppender.append("흣홯");
 
-        assertThat(stringCommaAppender.get()).isEqualTo("하하하,호호호,흣홯");
+        assertThat(stringCommaAppender.get()).isEqualTo("하하하, 호호호, 흣홯");
     }
 
     @Test
@@ -28,6 +28,6 @@ public class StringCommaAppenderTest {
         stringCommaAppender.append("호호호");
         stringCommaAppender.append("흣홯");
 
-        assertThat(stringCommaAppender.get()).isEqualTo("하하하,호호호,흣홯");
+        assertThat(stringCommaAppender.get()).isEqualTo("하하하, 호호호, 흣홯");
     }
 }
