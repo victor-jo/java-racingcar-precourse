@@ -1,7 +1,5 @@
 package racingcar.domain.car;
 
-import racingcar.context.ConsolePrinter;
-
 public class CarName {
 
     public static final int MAX_LENGTH = 5;
