@@ -1,9 +1,12 @@
 package racingcar.move;
 
+import racingcar.util.StringFlatAppender;
+
 import java.util.Objects;
 
 public class Position implements Comparable<Position> {
 
+    private static final String PRESENT_STRING = "-";
     private int point;
 
     public Position(int point) {
@@ -40,5 +43,14 @@ public class Position implements Comparable<Position> {
     @Override
     public int hashCode() {
         return Objects.hash(point);
+    }
+
+    @Override
+    public String toString() {
+        StringFlatAppender appender = new StringFlatAppender("");
+        for (int i = 0; i < point; i++) {
+            appender.append(PRESENT_STRING);
+        }
+        return appender.get();
     }
 }

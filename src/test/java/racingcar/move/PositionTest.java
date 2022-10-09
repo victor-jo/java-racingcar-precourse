@@ -2,7 +2,6 @@ package racingcar.move;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import racingcar.move.Position;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -52,5 +51,14 @@ public class PositionTest {
         Position other = new Position(2);
 
         assertEquals(me, other);
+    }
+
+    @Test
+    void 위치값이_특정메시지로_표시된다() {
+        Position empty = new Position(0);
+        Position two = new Position(2);
+
+        assertThat(empty.toString()).isEqualTo("");
+        assertThat(two.toString()).isEqualTo("--");
     }
 }
