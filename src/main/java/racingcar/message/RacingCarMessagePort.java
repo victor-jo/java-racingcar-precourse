@@ -4,6 +4,7 @@ import racingcar.context.Printer;
 import racingcar.context.Scanner;
 import racingcar.domain.car.Car;
 import racingcar.domain.car.Cars;
+import racingcar.domain.move.TryCount;
 import racingcar.domain.winner.Winner;
 
 public class RacingCarMessagePort implements RacingCarMessagePortAware, RacingCarMessageAware {
@@ -25,9 +26,9 @@ public class RacingCarMessagePort implements RacingCarMessagePortAware, RacingCa
     }
 
     @Override
-    public int getTry() {
+    public TryCount getTry() {
         printer.println(getMessage().getTry());
-        return scanner.getTry(printer);
+        return new TryCount(scanner.getTry(printer));
     }
 
     @Override
