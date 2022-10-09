@@ -30,9 +30,8 @@ public class Cars implements Iterable<Car> {
         }
     }
 
-    public Cars sort() {
+    public void sort() {
         Collections.sort(cars);
-        return this;
     }
 
     @Override

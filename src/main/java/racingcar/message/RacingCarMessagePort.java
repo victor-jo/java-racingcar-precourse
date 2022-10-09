@@ -7,7 +7,7 @@ import racingcar.domain.car.Cars;
 import racingcar.domain.move.TryCount;
 import racingcar.domain.winner.Winner;
 
-public class RacingCarMessagePort implements RacingCarMessagePortAware, RacingCarMessageAware {
+public class RacingCarMessagePort implements RacingCarMessageAware {
 
     private RacingCarMessage message = null;
 
@@ -19,19 +19,16 @@ public class RacingCarMessagePort implements RacingCarMessagePortAware, RacingCa
         this.scanner = scanner;
     }
 
-    @Override
     public Cars getCars() {
         printer.println(getMessage().getNames());
         return new Cars(scanner.getNames());
     }
 
-    @Override
     public TryCount getTry() {
         printer.println(getMessage().getTry());
         return new TryCount(scanner.getTry());
     }
 
-    @Override
     public void play(Cars cars) {
         for (Car car : cars) {
             printer.println(car.toString());
@@ -39,12 +36,10 @@ public class RacingCarMessagePort implements RacingCarMessagePortAware, RacingCa
         printer.println();
     }
 
-    @Override
     public void finish(Winner winner) {
         printer.println(getMessage().getWinner() + winner.toString());
     }
 
-    @Override
     public void error(String message) {
         printer.println(message);
     }
