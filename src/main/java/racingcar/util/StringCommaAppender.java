@@ -10,14 +10,13 @@ public class StringCommaAppender {
     }
 
     public void append(String str) {
-        sb.append(COMMA)
-            .append(str);
+        if (!"".equals(sb.toString())) {
+            sb.append(COMMA);
+        }
+        sb.append(str);
     }
 
     public String get() {
-        if (sb.toString().startsWith(COMMA)) {
-            sb = new StringBuilder(sb.substring(1));
-        }
         return sb.toString();
     }
 }
