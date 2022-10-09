@@ -4,7 +4,7 @@ import racingcar.util.StringFlatAppender;
 
 import java.util.Objects;
 
-public class Position implements Comparable<Position> {
+public class Position {
 
     private static final String PRESENT_STRING = "-";
     private int point;
@@ -19,17 +19,6 @@ public class Position implements Comparable<Position> {
 
     public int get() {
         return this.point;
-    }
-
-    @Override
-    public int compareTo(Position other) {
-        if (this.get() > other.get()) {
-            return -1;
-        }
-        else if (this.get() < other.get()) {
-            return 1;
-        }
-        return 0;
     }
 
     @Override

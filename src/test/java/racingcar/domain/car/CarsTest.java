@@ -38,12 +38,9 @@ public class CarsTest {
     @Test
     void 전체_자동차가_이동한다() {
         Cars cars = new Cars(Arrays.asList("우쾅쾅두둘", "나의행복", "나의사랑"));
-
         cars.move(new Move(() -> 4));
-        List<Integer> position = cars.getPositions();
-
-        assertThat(position.get(0)).isEqualTo(1);
-        assertThat(position.get(1)).isEqualTo(1);
-        assertThat(position.get(2)).isEqualTo(1);
+        for (Car car : cars) {
+            assertThat(car.getPosition()).isEqualTo(1);
+        }
     }
 }

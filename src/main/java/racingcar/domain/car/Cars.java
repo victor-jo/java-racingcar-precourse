@@ -3,10 +3,7 @@ package racingcar.domain.car;
 import racingcar.domain.move.Move;
 import racingcar.util.StringCommaAppender;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Spliterator;
+import java.util.*;
 import java.util.function.Consumer;
 
 public class Cars implements Iterable<Car> {
@@ -33,12 +30,9 @@ public class Cars implements Iterable<Car> {
         }
     }
 
-    public List<Integer> getPositions() {
-        List<Integer> positions = new ArrayList<>();
-        for (Car car : this.cars) {
-            positions.add(car.getPosition());
-        }
-        return positions;
+    public Cars sort() {
+        Collections.sort(cars);
+        return this;
     }
 
     @Override

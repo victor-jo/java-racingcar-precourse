@@ -4,7 +4,7 @@ import racingcar.domain.move.Move;
 import racingcar.domain.move.MoveType;
 import racingcar.domain.move.Position;
 
-public class Car {
+public class Car implements Comparable<Car> {
 
     private final CarName name;
     private final Position position;
@@ -36,5 +36,10 @@ public class Car {
     @Override
     public String toString() {
         return name.get() + " : " + position.toString();
+    }
+
+    @Override
+    public int compareTo(Car other) {
+        return Integer.compare(other.getPosition(), this.getPosition());
     }
 }
