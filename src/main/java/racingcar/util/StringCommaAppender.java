@@ -3,7 +3,7 @@ package racingcar.util;
 public class StringCommaAppender extends StringAppender {
 
     private static final String COMMA = ",";
-    public static final String BLANK = " ";
+    private static final String BLANK = " ";
 
     public StringCommaAppender(String str) {
         super(str);

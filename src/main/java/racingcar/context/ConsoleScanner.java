@@ -4,7 +4,7 @@ import camp.nextstep.edu.missionutils.Console;
 
 public class ConsoleScanner implements Scanner {
 
-    public static final String EXCEPTION_MESSAGE = "[ERROR] 시도할 횟수가 잘못되었습니다.";
+    private static final String EXCEPTION_MESSAGE = "[ERROR] 시도할 횟수가 잘못되었습니다.";
 
     @Override
     public String getNames() {

@@ -2,8 +2,8 @@ package racingcar.domain.car;
 
 public class CarName {
 
-    public static final int MAX_LENGTH = 5;
-    public static final String LENGTH_EXCEPTION_MESSAGE = "[ERROR] 자동차에 등록되는 이름은 5자 이하만 가능합니다.";
+    private static final int MAX_LENGTH = 5;
+    private static final String LENGTH_EXCEPTION_MESSAGE = "[ERROR] 자동차에 등록되는 이름은 5자 이하만 가능합니다.";
     private final String name;
 
     public CarName(String name) {
