@@ -33,6 +33,8 @@ public class RacingCarDefaultCycle
         }
         catch (Exception e) {
             getPort().error(e.getMessage());
+
+            // FIXME : 해당 코드 삭제하고 while 문으로 접근하게 할 경우 테스트 케이스 통과 못함, 확인 필요
             cars = getPort().getCars();
         }
     }
@@ -50,6 +52,8 @@ public class RacingCarDefaultCycle
         }
         catch (Exception e) {
             getPort().error(e.getMessage());
+
+            // FIXME : 해당 코드 삭제하고 while 문으로 접근하게 할 경우 테스트 케이스 통과 못함, 확인 필요
             tryCount = getPort().getTry();
         }
     }
