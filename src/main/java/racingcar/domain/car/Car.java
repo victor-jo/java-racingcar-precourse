@@ -1,7 +1,7 @@
-package racingcar.car;
+package racingcar.domain.car;
 
-import racingcar.move.MoveType;
-import racingcar.move.Position;
+import racingcar.domain.move.MoveType;
+import racingcar.domain.move.Position;
 
 public class Car {
 

@@ -1,7 +1,4 @@
-package racingcar.move;
-
-import static racingcar.move.MoveType.GO;
-import static racingcar.move.MoveType.STOP;
+package racingcar.domain.move;
 
 public class MoveNumber {
 
@@ -29,6 +26,6 @@ public class MoveNumber {
     }
 
     public MoveType get() {
-        return this.number >= GO_LIMIT ? GO : STOP;
+        return this.number >= GO_LIMIT ? MoveType.GO : MoveType.STOP;
     }
 }

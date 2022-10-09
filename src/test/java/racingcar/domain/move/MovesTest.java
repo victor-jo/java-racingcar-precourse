@@ -1,6 +1,9 @@
-package racingcar.move;
+package racingcar.domain.move;
 
 import org.junit.jupiter.api.Test;
+import racingcar.domain.move.MoveType;
+import racingcar.domain.move.MoveTypes;
+import racingcar.domain.move.Moves;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

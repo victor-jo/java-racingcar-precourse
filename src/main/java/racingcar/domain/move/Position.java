@@ -1,4 +1,4 @@
-package racingcar.move;
+package racingcar.domain.move;
 
 import racingcar.util.StringFlatAppender;
 

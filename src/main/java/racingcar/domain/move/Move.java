@@ -1,4 +1,4 @@
-package racingcar.move;
+package racingcar.domain.move;
 
 import java.util.function.Supplier;
 

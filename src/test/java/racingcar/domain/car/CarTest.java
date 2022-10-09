@@ -1,13 +1,14 @@
-package racingcar.car;
+package racingcar.domain.car;
 
 import org.junit.jupiter.api.Test;
-import racingcar.move.MoveType;
+import racingcar.domain.car.Car;
+import racingcar.domain.move.MoveType;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static racingcar.move.MoveType.GO;
-import static racingcar.move.MoveType.STOP;
+import static racingcar.domain.move.MoveType.GO;
+import static racingcar.domain.move.MoveType.STOP;
 
 public class CarTest {
 
