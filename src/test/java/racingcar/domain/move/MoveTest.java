@@ -50,7 +50,7 @@ public class MoveTest {
             move0.goOrStop();
         });
 
-        assertThat(exception10.getMessage()).isEqualTo("숫자는 1에서 9까지만 입력 가능합니다.");
-        assertThat(exception0.getMessage()).isEqualTo("숫자는 1에서 9까지만 입력 가능합니다.");
+        assertThat(exception10.getMessage()).isEqualTo("[ERROR] 숫자는 1에서 9까지만 입력 가능합니다.");
+        assertThat(exception0.getMessage()).isEqualTo("[ERROR] 숫자는 1에서 9까지만 입력 가능합니다.");
     }
 }
