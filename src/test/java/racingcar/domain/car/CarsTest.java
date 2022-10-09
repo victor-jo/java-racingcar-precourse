@@ -32,7 +32,7 @@ public class CarsTest {
             Cars cars = new Cars(Arrays.asList("우쾅쾅두둘", "나으행복나으", "나의사랑"));
         });
 
-        assertThat(exception.getMessage()).isEqualTo("자동차에 등록되는 이름은 5자 이하만 가능합니다.");
+        assertThat(exception.getMessage()).isEqualTo("[ERROR] 자동차에 등록되는 이름은 5자 이하만 가능합니다.");
     }
 
     @Test
